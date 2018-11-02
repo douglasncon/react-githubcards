@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import GitHubCards from './GithubCards'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import * as serviceWorker from './serviceWorker';
+
+import GitHubCards from './GithubCards'
+
+
+
 
 ReactDOM.render(<GitHubCards />, document.getElementById('root'));
 

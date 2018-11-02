@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { PageHeader, Panel, Alert, Tabs, Tab } from 'react-bootstrap';
+import { PageHeader, Panel } from 'react-bootstrap';
 
 class Form extends Component {
 
@@ -43,7 +43,7 @@ const Card = (props) => {
 
 const CardList = (props) => {
 	return(  	
-      <div>{props.cards.map(card => <Card key={card.id} {...card} />)}</div>    
+      <div className="col-12 row">{props.cards.map(card => <Card key={card.id} {...card} />)}</div>    
   );
 };
 
@@ -60,38 +60,19 @@ class GitHubCards extends Component {
     
       render() {
         return (
-        <div>
-          <Alert bsStyle="warning">
-            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too
-            good.
-          </Alert>
-          <Panel>
-            <Panel.Body>Basic panel example</Panel.Body>
-          </Panel>
-          <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
-  <Tab eventKey={1} title="Tab 1">
-    Tab 1 content
-  </Tab>
-  <Tab eventKey={2} title="Tab 2">
-    Tab 2 content
-  </Tab>
-  <Tab eventKey={3} title="Tab 3" disabled>
-    Tab 3 content
-  </Tab>
-</Tabs>
-          {/* <PageHeader>
+        <div>         
+          <PageHeader>
             Github Cards finder
           </PageHeader>    
           <Panel>
             <Panel.Heading>
-              <Panel.Title componentClass="h3">Type your github user and press enter</Panel.Title>
+              <Panel.Title componentClass="h3">Type your GitHub User and press enter</Panel.Title>
             </Panel.Heading>      
             <Panel.Body>
               <Form onSubmit={this.addNewCard} />
               <CardList cards={this.state.cards}/>
             </Panel.Body>      
-          </Panel> */}
-          
+          </Panel>
         </div>
       );
     }
